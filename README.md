@@ -7,7 +7,7 @@
   - [Additional Info](#additional-info)
 
   ## Mock-Up
-  ![Professional Readme Generator Demo]()
+  ![Professional Readme Generator Demo](./Develop/mockup/demo.gif)
 
   ## Description:
   The above mock up demonstrates the usage of the application
