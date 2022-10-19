@@ -21,3 +21,6 @@
   - Type 'node index.js'
   - Respond to prompts
   - After completion, a README will generate
+
+  ## Aditional Info:
+  - Video link --> [Presentation] (https://drive.google.com/file/d/1YA0b7gU5EPl7m14xo9pcR9LQoqN3eb-i/view?usp=sharing)
