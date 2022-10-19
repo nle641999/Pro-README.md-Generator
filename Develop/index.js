@@ -1,8 +1,10 @@
-// TODO: Include packages needed for this application
+// Packages for the application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
-// TODO: Create an array of questions for user input
+const licenses = ['MIT']
+
+// Questions
 const questions = [
     // Asks for the project name
     {
@@ -94,6 +96,22 @@ const questions = [
 
         }
     },
+    //Asks user to pick their license
+    {
+        type:'input',
+        name:'license',
+        message:'Pick your license',
+        choices: licenses,
+        validate:licenseInput =>{
+            if (licenseInput) {
+                return true
+            } else {
+                console.log ("Please pick your license")
+                return false
+            }
+
+        }
+    },
     //Asks user to input their GitHUb
     {
         type:'input',
@@ -126,7 +144,7 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// README file write function
 function writeToFile(fileName, data) {
     fs.writeFile(fileName,data,(error) => {
         if(error)
@@ -134,7 +152,8 @@ function writeToFile(fileName, data) {
         console.log("COMPLETED, your super duper Professional README is created!")
     });
 };
-// TODO: Create a function to initialize app
+
+// Initialize function
 function init() {
 inquirer.prompt(questions)
 .then(function(userInput){
